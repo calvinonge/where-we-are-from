@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where We're From</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="tier-surface">
+    <!-- Main container -->
+    <div class="app-container">
+        <!-- Home screen -->
+        <div class="home-screen" id="home-screen">
+            <div class="home-content">
+                <h1 class="home-title">Where We're From</h1>
+                <p class="home-description">
+                    A journey through three levels of connection. Share stories, explore identity, 
+                    and discover what shapes us through thoughtful conversation.
+                </p>
+                <button class="start-button" id="home-start-btn">
+                    <span>Begin Journey</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game screen -->
+        <div class="game-screen" id="game-screen" style="display: none;">
+            <!-- Header with progress -->
+            <header class="app-header">
+                <div class="progress-container">
+                    <div class="progress-track">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="tier-info">
+                        <span class="tier-number" id="tier-number">1</span>
+                        <span class="tier-name" id="tier-name">Surface</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main card area -->
+            <main class="card-stage">
+                <div class="card-container">
+                    <div class="question-card" id="current-card">
+                        <div class="card-inner">
+                            <div class="question-text">
+                                Ready to begin your journey of connection and discovery?
+                            </div>
+                            <div class="card-footer">
+                                <div class="reflection-hint">Hold to reflect</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reflection overlay -->
+                    <div class="reflection-overlay" id="reflection-overlay">
+                        <div class="reflection-content">
+                            <div class="reflection-timer">
+                                <svg class="timer-circle" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" class="timer-track"/>
+                                    <circle cx="50" cy="50" r="45" class="timer-progress" id="timer-progress"/>
+                                </svg>
+                                <div class="timer-text" id="timer-text">60</div>
+                            </div>
+                            <p class="reflection-message">Take a moment to reflect...</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Controls -->
+            <footer class="app-footer">
+                <button class="next-button" id="next-btn" style="display: none;">
+                    <span>Next</span>
+                    <svg class="next-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Word cloud modal -->
+    <div class="modal-overlay" id="word-cloud-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Shared Story</h2>
+                <p>Capture the essence of your conversation</p>
+            </div>
+            
+            <div class="word-input-section">
+                <input type="text" id="word-input" placeholder="Add a meaningful word...">
+                <button id="add-word-btn">Add</button>
+            </div>
+            
+            <div class="collected-words" id="collected-words"></div>
+            
+            <div class="modal-actions">
+                <button id="download-btn" class="secondary-button">Download Summary</button>
+                <button id="new-journey-btn" class="primary-button">New Journey</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

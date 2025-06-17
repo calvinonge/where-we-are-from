@@ -1,0 +1,32 @@
+{
+  "name": "where-we-are-from",
+  "version": "1.0.0",
+  "description": "A sophisticated vulnerability-prompt game for meaningful conversations",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "echo 'Deploy using GitHub Pages, Netlify, or Vercel'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/where-we-are-from.git"
+  },
+  "keywords": [
+    "conversation",
+    "vulnerability",
+    "identity",
+    "game",
+    "connection",
+    "questions",
+    "relationships"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/where-we-are-from/issues"
+  },
+  "homepage": "https://yourusername.github.io/where-we-are-from"
+}
+
